@@ -1,4 +1,5 @@
 # Babita 10-Mar-19
+# Solution to problem 6 in Problem set 2019 
 # Program to split the input string and print every second word
 
 # Gt the input string
