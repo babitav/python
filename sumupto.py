@@ -3,19 +3,25 @@
 
 sum = 0
 i = 1
-sumupto = int(input("Please enter a positive number"))
 
-# Check if the input number is not a positive integer(less than 1), ask user to enter the number again
-while True:
-  if sumupto <=0 : 
-      sumupto = int(input("Please enter a positive number"))
-  else:
-    break
+try:
+    sumupto = int(input("Please enter a positive number "))
 
-# Loop from 1 till the input number and add the number i to the sum
-while i <= sumupto :
-  sum = sum + i
-  i = i + 1
+    # Check if the input number is not a positive integer(less than 1), ask user to enter the number again
+    while True:
+        if sumupto <=0 : 
+            sumupto = int(input("Please enter a positive number "))
+        else:
+            break
 
-print ("The sum of numbers from 1 to",sumupto, "is ", sum)
+    # Loop from 1 till the input number and add the number i to the sum
+    while i <= sumupto :
+        sum = sum + i
+        i = i + 1
 
+    print ("The sum of numbers from 1 to",sumupto, "is ", sum)
+
+except ValueError:
+    print ("Please enter a +ve number and not a string")
+except TypeError:
+    print ("Type Error - Please enter a +ve number and not a string")
