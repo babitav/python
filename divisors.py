@@ -14,4 +14,5 @@ for i in range(1000,10001):
 			
 			#This means the number is not divisible by 12
 			# So it is concluded that the number is divisible by 6 and not by 12
+			# hence display the number
 			print(i)

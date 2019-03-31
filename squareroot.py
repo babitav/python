@@ -2,19 +2,20 @@
 # Program to calculate the square root of a given number 
 
 try:
-    getroot  = int(input("Please enter a positive number whose square root needs to be determined "))
+    getroot  = float(input("Please enter a positive number whose square root needs to be determined "))
 
     # Check if the input number is not a positive integer(less than 1), ask user to enter the number again
     while True:
         if getroot  <=0 : 
-            getroot = int(input("Please enter a positive number "))
+            getroot = float(input("Please enter a positive number "))
         else:
             break
 
+    # Consider the initial estimate to begin with as half of the input number
     estimate = getroot / 2
 
     #Keep going until the square of estimate is within 0.1 of getroot
-    while abs((estimate * estimate) -getroot) > 0.01:
+    while abs((estimate * estimate) -getroot) > 0.1:
 
         # This is Newton's method to improve the estimate
         # Adapted from https://tour.golang.org/flowcontrol/8
